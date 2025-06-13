@@ -1,0 +1,85 @@
+/* Simple Custom Styles for Technicians Cards - Green Theme */
+
+/* Import Bootstrap (add this to your HTML head or install via npm) */
+/* <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"> */
+
+/* Using your existing app.css color variables */
+
+/* Card hover effects */
+.card {
+  transition:
+    transform 0.2s ease-in-out,
+    box-shadow 0.2s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-medium) !important;
+}
+
+/* Custom card header styling */
+.card-header.bg-success {
+  background: linear-gradient(
+    135deg,
+    var(--primary-color),
+    var(--primary-light)
+  ) !important;
+  border: none;
+}
+
+/* Badge styling */
+.badge.bg-success.bg-opacity-10 {
+  background-color: var(--accent-color) !important;
+  color: var(--primary-color) !important;
+  border: 1px solid var(--primary-light);
+  font-weight: 500;
+}
+
+/* Review cards styling */
+.bg-light {
+  background-color: var(--secondary-color) !important;
+  border: 1px solid var(--accent-color);
+}
+
+/* Loading spinner custom color */
+.spinner-border.text-success {
+  color: var(--primary-color) !important;
+}
+
+/* Text color utilities */
+.text-success {
+  color: var(--primary-color) !important;
+}
+
+/* Custom spacing for mobile */
+@media (max-width: 768px) {
+  .container-fluid {
+    padding: 1rem 0 !important;
+  }
+
+  .display-4 {
+    font-size: 2rem !important;
+  }
+}
+
+/* Smooth animations */
+* {
+  transition: var(--transition);
+}
+
+/* Button hover effects */
+.btn-success:hover {
+  background-color: var(--primary-dark);
+  border-color: var(--primary-dark);
+  transform: translateY(-1px);
+}
+
+/* Card title styling */
+.card-title {
+  font-weight: 600;
+}
+
+/* Review text styling */
+.fst-italic {
+  font-style: italic !important;
+}

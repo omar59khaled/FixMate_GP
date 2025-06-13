@@ -1,0 +1,268 @@
+/* BookingSummaries.css */
+
+.bookings-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  width: 100%;
+}
+
+.bookings-title {
+  color: #2c3e50;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+
+.bookings-card {
+  border: none;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.summary-card {
+  border: none;
+  border-radius: 15px;
+  background: linear-gradient(135deg, #1f2c20 0%, #4ba26b 100%);
+  color: white;
+}
+
+.summary-stat h3 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+/* Table Styling */
+.bookings-table {
+  margin-bottom: 0;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.bookings-table thead th {
+  background: #2c3e50 !important;
+  color: white !important;
+  border: none;
+  padding: 1rem 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  letter-spacing: 0.5px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.bookings-table thead th:first-child {
+  border-top-left-radius: 10px;
+}
+
+.bookings-table thead th:last-child {
+  border-top-right-radius: 10px;
+}
+
+/* Column widths */
+.technician-col {
+  width: 30%;
+}
+
+.date-col {
+  width: 25%;
+}
+
+.status-col {
+  width: 15%;
+}
+
+.price-col {
+  width: 15%;
+}
+
+.action-col {
+  width: 15%;
+}
+
+/* Table body styling */
+.bookings-table tbody tr {
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.bookings-table tbody tr:hover {
+  background-color: #f8f9fa !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.bookings-table tbody td {
+  padding: 1rem 0.75rem;
+  border: none;
+  border-bottom: 1px solid #e9ecef;
+  vertical-align: middle;
+}
+
+/* Technician cell styling */
+.technician-cell {
+  padding: 1.25rem 0.75rem;
+}
+
+.technician-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.technician-name {
+  font-size: 1rem;
+  color: #2c3e50;
+}
+
+.user-name {
+  font-size: 0.825rem;
+  color: #6c757d;
+  font-style: italic;
+}
+
+/* Date cell styling */
+.date-cell {
+  color: #495057;
+  font-weight: 500;
+}
+
+.booking-date {
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+/* Status cell styling */
+.status-cell .badge {
+  font-size: 0.75rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Price cell styling */
+.booking-price {
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+/* Action cell styling */
+.action-cell .btn {
+  border-radius: 20px;
+  padding: 0.5rem 1rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.action-cell .btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+}
+
+/* Status-based row styling */
+.booking-row[data-status="confirmed"] {
+  border-left: 4px solid #28a745;
+}
+
+.booking-row[data-status="pending"] {
+  border-left: 4px solid #ffc107;
+}
+
+.booking-row[data-status="cancelled"] {
+  border-left: 4px solid #dc3545;
+}
+
+.booking-row[data-status="completed"] {
+  border-left: 4px solid #17a2b8;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .bookings-table {
+    font-size: 0.875rem;
+  }
+
+  .bookings-table thead th,
+  .bookings-table tbody td {
+    padding: 0.75rem 0.5rem;
+  }
+
+  .technician-name {
+    font-size: 0.9rem;
+  }
+
+  .user-name {
+    font-size: 0.75rem;
+  }
+
+  .booking-date {
+    font-size: 0.8rem;
+  }
+
+  .booking-price {
+    font-size: 1rem;
+  }
+
+  .summary-stat h3 {
+    font-size: 2rem;
+  }
+}
+
+/* Loading and error states */
+.bookings-card .spinner-border {
+  width: 3rem;
+  height: 3rem;
+  border-width: 0.3em;
+}
+
+/* Animation for table rows */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.booking-row {
+  animation: fadeInUp 0.5s ease forwards;
+}
+
+.booking-row:nth-child(2) {
+  animation-delay: 0.1s;
+}
+.booking-row:nth-child(3) {
+  animation-delay: 0.2s;
+}
+.booking-row:nth-child(4) {
+  animation-delay: 0.3s;
+}
+.booking-row:nth-child(5) {
+  animation-delay: 0.4s;
+}
+
+/* Custom scrollbar for table */
+.table-responsive::-webkit-scrollbar {
+  height: 8px;
+}
+
+.table-responsive::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.table-responsive::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+.table-responsive::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

@@ -1,0 +1,230 @@
+/* CSS Variables for consistent theming */
+:root {
+  --primary-color: #377747;
+  --primary-light: #72d39f;
+  --primary-dark: #1c4524;
+  --secondary-color: #f8faf9;
+  --accent-color: #e8f5e8;
+  --text-primary: #1a1a1a;
+  --text-secondary: #6b7280;
+  --white: #ffffff;
+  --shadow-light: 0 2px 10px rgba(46, 109, 74, 0.08);
+  --shadow-medium: 0 4px 20px rgba(46, 109, 74, 0.12);
+  --border-radius: 12px;
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Global Styles */
+.about-page {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: var(--text-primary);
+}
+
+.about-page section {
+  padding: 60px 0;
+}
+
+/* Header Section */
+.header-section {
+  background: linear-gradient(
+    135deg,
+    var(--secondary-color) 0%,
+    var(--accent-color) 100%
+  );
+  padding: 100px 0 80px 0;
+}
+
+.header-section h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.header-section .lead {
+  font-size: 1.3rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+/* Main Content */
+.main-content {
+  background: var(--white);
+}
+
+.content-block {
+  padding: 2rem 0;
+}
+
+.content-block p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+}
+
+.content-block h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 2rem;
+}
+
+/* Image Placeholders */
+.image-placeholder {
+  background: var(--white);
+  border: 2px dashed var(--primary-light);
+  border-radius: var(--border-radius);
+  padding: 60px 40px;
+  text-align: center;
+  transition: var(--transition);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-placeholder:hover {
+  border-color: var(--primary-color);
+  box-shadow: var(--shadow-light);
+}
+
+.placeholder-content {
+  text-align: center;
+}
+
+.placeholder-icon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.image-placeholder p {
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.image-placeholder small {
+  color: var(--text-secondary);
+  font-style: italic;
+}
+
+/* Features Section */
+.features-section {
+  background: var(--secondary-color);
+}
+
+.features-section h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 3rem;
+}
+
+.feature-item {
+  background: var(--white);
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-light);
+  transition: var(--transition);
+  height: 100%;
+}
+
+.feature-item:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-medium);
+}
+
+.feature-item h4 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.feature-item p {
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* Vision Section */
+.vision-section {
+  background: var(--white);
+}
+
+/* Team Section */
+.team-section {
+  background: var(--accent-color);
+}
+
+.university-info {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 2px solid var(--primary-light);
+}
+
+.university-info h5 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.university-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .header-section h1 {
+    font-size: 2.5rem;
+  }
+
+  .content-block h2 {
+    font-size: 2rem;
+  }
+
+  .about-page section {
+    padding: 50px 0;
+  }
+
+  .header-section {
+    padding: 80px 0 60px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-section h1 {
+    font-size: 2rem;
+  }
+
+  .header-section .lead {
+    font-size: 1.1rem;
+  }
+
+  .content-block h2 {
+    font-size: 1.8rem;
+  }
+
+  .content-block p {
+    font-size: 1rem;
+  }
+
+  .features-section h2 {
+    font-size: 2rem;
+  }
+
+  .image-placeholder {
+    padding: 40px 30px;
+    margin-bottom: 2rem;
+  }
+
+  .placeholder-icon {
+    font-size: 3rem;
+  }
+}
