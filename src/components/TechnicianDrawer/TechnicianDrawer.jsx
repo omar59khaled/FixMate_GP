@@ -33,7 +33,7 @@ const TechnicianModal = ({
     console.log("Fetching technicians for serviceId:", serviceId);
     try {
       const response = await fetch(
-        `https://x8sdvnt5-5049.uks1.devtunnels.ms/api/Technician/GetTechniciansByService/${serviceId}`
+        `https://1smgdvqm-5049.uks1.devtunnels.ms/api/Technician/GetTechniciansByService/${serviceId}`
       );
       
       if (!response.ok) {
@@ -66,7 +66,7 @@ const TechnicianModal = ({
   const fetchTechnicianOffers = async () => {
     try {
       const response = await fetch(
-        `https://x8sdvnt5-5049.uks1.devtunnels.ms/api/User/offers?serviceId=${serviceId}`,
+        `https://1smgdvqm-5049.uks1.devtunnels.ms/api/User/offers?serviceId=${serviceId}`,
         {
           headers: {
             'Authorization': `Bearer ${localStorage.getItem('userToken')}` // Use token from localStorage
@@ -122,7 +122,7 @@ const TechnicianModal = ({
       console.log("Submitting booking confirmation with data:", bookingData);
       
       const response = await fetch(
-        "https://x8sdvnt5-5049.uks1.devtunnels.ms/api/Booking/confirm-booking",
+        "https://1smgdvqm-5049.uks1.devtunnels.ms/api/Booking/confirm-booking",
         {
           method: "POST",
           headers: {

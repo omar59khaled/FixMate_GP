@@ -68,7 +68,7 @@ const TechnicianDashboard = () => {
       
       console.log("Fetching notifications with token authentication");
       const response = await axios.get(
-        'https://x8sdvnt5-5049.uks1.devtunnels.ms/api/Technician/notifications',
+        'https://1smgdvqm-5049.uks1.devtunnels.ms/api/Technician/notifications',
         config
       );
       
@@ -117,7 +117,7 @@ const TechnicianDashboard = () => {
       };
       
       await axios.put(
-        'https://x8sdvnt5-5049.uks1.devtunnels.ms/api/Technician/notifications/respond',
+        'https://1smgdvqm-5049.uks1.devtunnels.ms/api/Technician/notifications/respond',
         {
           notificationId: notificationId,
           isRead: true,
@@ -170,7 +170,7 @@ const TechnicianDashboard = () => {
       };
       
       await axios.put(
-        'https://x8sdvnt5-5049.uks1.devtunnels.ms/api/Technician/notifications/read',
+        'https://1smgdvqm-5049.uks1.devtunnels.ms/api/Technician/notifications/read',
         {
           notificationId: notificationId,
           isRead: true
@@ -239,7 +239,7 @@ const TechnicianDashboard = () => {
       try {
         // Try original endpoint first
         response = await axios.post(
-          'https://x8sdvnt5-5049.uks1.devtunnels.ms/api/Technician/submit-offer',
+          'https://1smgdvqm-5049.uks1.devtunnels.ms/api/Technician/submit-offer',
           {
             notificationId: currentNotificationId,
             offeredPrice: parseFloat(offeredPrice)
@@ -251,7 +251,7 @@ const TechnicianDashboard = () => {
         
         // If first endpoint fails, try alternative endpoint
         response = await axios.post(
-          'https://x8sdvnt5-5049.uks1.devtunnels.ms/api/Booking/technician-offer',
+          'https://1smgdvqm-5049.uks1.devtunnels.ms/api/Booking/technician-offer',
           {
             notificationId: currentNotificationId,
             offeredPrice: parseFloat(offeredPrice)
@@ -321,7 +321,7 @@ const TechnicianDashboard = () => {
       console.log('Deleting price offer for offerId:', offerId);
       
       const response = await axios.delete(
-        `https://x8sdvnt5-5049.uks1.devtunnels.ms/api/Booking/cancel-booking`,
+        `https://1smgdvqm-5049.uks1.devtunnels.ms/api/Booking/cancel-booking`,
         {
           ...config,
           data: { offerId: offerId }
@@ -421,9 +421,9 @@ const TechnicianDashboard = () => {
       />
 
       <div className="">
-        <div className="notifications-section">
-          <div className="notifications-header">
-            <h2>Offers</h2>
+        <div className="notifications-section ">
+          <div className="notifications-header ">
+            <h3 className='text-light'>Offers</h3>
            
           </div>
           

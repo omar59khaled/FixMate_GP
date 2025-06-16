@@ -54,10 +54,10 @@ const Navbar = () => {
 
         {/* Navbar Links */}
         <div className={`collapse navbar-collapse ${isOpen ? 'show' : ''}`}>
-          <ul className="navbar-nav mx-auto nav-modern">
+          <ul className="navbar-nav mx-auto nav-modern text-light">
             <li className="nav-item">
               <NavLink className="nav-link nav-link-modern" to="/">
-                <span className="nav-text">Home</span>
+                <span className="nav-text ">Home</span>
               </NavLink>
             </li>
             <li className="nav-item">

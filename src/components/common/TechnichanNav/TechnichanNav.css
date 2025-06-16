@@ -27,6 +27,8 @@
   text-decoration: none;
   color: inherit;
   transition: opacity 0.2s ease;
+  background: none !important;
+  border: none !important;
 }
 
 .profile-icon-link:hover {
@@ -36,7 +38,7 @@
 .profile-icon {
   width: 40px;
   height: 40px;
-  background-color: rgba(255, 255, 255, 0.2);
+
   border-radius: 50%;
   display: flex;
   align-items: center;

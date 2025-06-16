@@ -20,7 +20,6 @@ import assembly from '../../assets/images/assembly.jpg'
 import assembly2 from '../../assets/images/the-best-tv-mounts.jpg'
 import assembly3 from '../../assets/images/roof_roofing_asphalt_shingle_repair_replacement_new_roofer_remove_removal_shutterstock_134922203.webp'
 import assembly4 from '../../assets/images/home repairs.webp'
-import heroooo from "../../assets/images/heroooo.jpg"
 import { Link2 } from "lucide-react";
 
 const services = [
@@ -89,17 +88,16 @@ const HomeServices = () => {
   };
  
   return (
-    <div className="homepage-container ">
+    <div className="homepage-container">
       {/* Background Elements */}
-      <div className="background-elements">
+      {/* <div className="background-elements">
         <div className="bg-shape bg-shape-1"></div>
         <div className="bg-shape bg-shape-2"></div>
         <div className="bg-gradient-overlay"></div>
-      </div>
+      </div> */}
 
-      <div className="container">
-        {/* Hero Section */}
-       <div className={`hero-section ${isVisible ? 'animate-in' : ''}`}>
+      {/* Hero Section  */}
+      <div className={`hero-section ${isVisible ? 'animate-in' : ''}`}>
         <div className="hero-content-wrapper">
           <div className="hero-content text-center">
             <h1 className="hero-title">
@@ -125,7 +123,8 @@ const HomeServices = () => {
         </div>
       </div>
 
-        {/* Services Section */}
+      {/* Services Section - With Container */}
+      <div className="container">
         <div className="services-section mt-0 pt-0">
           <div className="row mt-0 pt-0">
             <div className="col-12 mt-0 pt-0">
@@ -135,18 +134,18 @@ const HomeServices = () => {
               </div>
 
               {/* Services Grid */}
-              <div className="services-grid">
+              <div className="services-grid bg-light">
                 {services.map((service, index) => (
                   <div
                     key={service.id}
-                    className={`service-card ${selectedService.id === service.id ? "service-active" : ""}`}
+                    className={`service-cardd ${selectedService.id === service.id ? "service-active" : ""}`}
                     onClick={() => handleServiceSelect(service)}
                     style={{ animationDelay: `${index * 0.1}s` }}
                   >
                     <div className="service-icon-container">
                       <FontAwesomeIcon icon={service.icon} className="service-icon" />
                     </div>
-                    <h3 className="service-name">{service.name}</h3>
+                    <h3 className="service-name ">{service.name}</h3>
                     <div className="service-hover-overlay">
                       <span>View Details</span>
                     </div>
@@ -182,7 +181,7 @@ const HomeServices = () => {
                     <div className="col-lg-6">
                       <div className="service-content">
                         <h3 className="service-details-title">{selectedService.name}</h3>
-                        <p className="service-description">{selectedService.description}</p>
+                        <p className="service-description text-dark">{selectedService.description}</p>
                         
                         <div className="keywords-section">
                           <h4 className="keywords-title">Popular Services:</h4>
@@ -197,17 +196,15 @@ const HomeServices = () => {
 
                         <div className="cta-section">
                           <Link to="/services">
-            <button className="btn btn-primary-modern btn-lg">
-                         Book Now
-                  </button >
-          </Link>
-                 <Link to="/services">
-            <button className="btn btn-outline-modern btn-lg">
-                            Learn More
-                          </button>
-          </Link>   
-                          
-                          
+                            <button className="btn btn-primary-modern btn-lg">
+                              Book Now
+                            </button>
+                          </Link>
+                          <Link to="/services">
+                            <button className="btn btn-outline-modern btn-lg">
+                              Learn More
+                            </button>
+                          </Link>   
                         </div>
                       </div>
                     </div>

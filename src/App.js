@@ -27,7 +27,7 @@ import "./App.css";
 const AppContent = () => {
   const location = useLocation();
 
-  const publicRoutes = ["/", "/services" , "/booking-summary", "/Booking-Summmaries" , "/technicians", "/about","/image-classify"]; // routes that should show header/footer
+  const publicRoutes = ["/", "/services" , "/booking-summary", "/Booking-Summmaries" , "/technicians", "/about","/image-classify", "/contact"]; // routes that should show header/footer
   
   // Hide header/footer if current path is not in publicRoutes
   const hideHeaderFooter = !publicRoutes.some(route => 

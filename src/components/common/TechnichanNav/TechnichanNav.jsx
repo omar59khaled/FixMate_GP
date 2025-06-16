@@ -9,7 +9,7 @@ const TechnichanNav = ({
   showProfileLink = true 
 }) => {
   return (
-    <header className="dashboard-header">
+    <header className="dashboard-header mt-0">
       <h1>{title}</h1>
       <div className="user-info">
         {showProfileLink && (

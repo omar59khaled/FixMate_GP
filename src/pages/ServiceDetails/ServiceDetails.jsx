@@ -38,7 +38,7 @@ const ServiceDetails = () => {
     const fetchServiceDetails = async () => {
       try {
         // Fetch all services
-        const response = await fetch('https://x8sdvnt5-5049.uks1.devtunnels.ms/api/services/services');
+        const response = await fetch('https://1smgdvqm-5049.uks1.devtunnels.ms/api/services/services');
         if (!response.ok) {
           throw new Error(`HTTP error: ${response.status}`);
         }
@@ -82,7 +82,7 @@ const ServiceDetails = () => {
     setRequestError(null);
     
     try {
-      const response = await fetch('https://x8sdvnt5-5049.uks1.devtunnels.ms/api/Booking/start-booking-request', {
+      const response = await fetch('https://1smgdvqm-5049.uks1.devtunnels.ms/api/Booking/start-booking-request', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -194,7 +194,7 @@ const ServiceDetails = () => {
   }
 
   // Ensure the image URL is correct
-  const baseUrl = "https://x8sdvnt5-5049.uks1.devtunnels.ms";
+  const baseUrl = "https://1smgdvqm-5049.uks1.devtunnels.ms";
   const imageUrl = service.imageUrl
     ? service.imageUrl.startsWith("http")
       ? service.imageUrl

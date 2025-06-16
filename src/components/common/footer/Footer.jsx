@@ -5,13 +5,13 @@ const Footer = () => {
     <>
       <style jsx>{`
         .modern-footer {
-          background: linear-gradient(180deg, #f8f9fa 0%, #e9ecef 100%);
-          color: #2c3e50;
+          background: linear-gradient(180deg, #064635 0%, #052d29 100%);
+          color: #e8f5f2;
           padding: 60px 0 30px;
           margin-top: 80px;
           position: relative;
           overflow: hidden;
-          border-top: 1px solid #dee2e6;
+          border-top: 1px solid #0a5d4a;
         }
 
         .modern-footer::before {
@@ -21,8 +21,8 @@ const Footer = () => {
           left: 0;
           right: 0;
           bottom: 0;
-          background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="rgba(46,109,74,0.03)"/><circle cx="75" cy="75" r="1" fill="rgba(46,109,74,0.02)"/><circle cx="50" cy="10" r="0.5" fill="rgba(46,109,74,0.025)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
-          opacity: 0.4;
+          background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="rgba(232,245,242,0.05)"/><circle cx="75" cy="75" r="1" fill="rgba(232,245,242,0.03)"/><circle cx="50" cy="10" r="0.5" fill="rgba(232,245,242,0.04)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+          opacity: 0.6;
         }
 
         .footer-content {
@@ -36,7 +36,7 @@ const Footer = () => {
           left: 0;
           right: 0;
           height: 100px;
-          background: linear-gradient(180deg, rgba(46, 109, 74, 0.05) 0%, rgba(46, 109, 74, 0.1) 100%);
+          background: linear-gradient(180deg, rgba(10, 93, 74, 0.3) 0%, rgba(10, 93, 74, 0.5) 100%);
           clip-path: polygon(0 50%, 100% 0%, 100% 100%, 0% 100%);
         }
 
@@ -45,7 +45,7 @@ const Footer = () => {
           font-weight: 600;
           font-size: 1.2rem;
           margin-bottom: 25px;
-          color: #2E6D4A;
+          color: #b8e6d3;
           position: relative;
         }
 
@@ -56,7 +56,7 @@ const Footer = () => {
           left: 0;
           width: 40px;
           height: 2px;
-          background: linear-gradient(90deg, #48A268, transparent);
+          background: linear-gradient(90deg, #4ade80, transparent);
           border-radius: 2px;
         }
 
@@ -72,7 +72,7 @@ const Footer = () => {
         }
 
         .footer-link {
-          color: #6c757d;
+          color: #a1d9cc;
           text-decoration: none;
           font-size: 0.95rem;
           font-weight: 400;
@@ -82,7 +82,7 @@ const Footer = () => {
         }
 
         .footer-link:hover {
-          color: #2E6D4A;
+          color: #e8f5f2;
           padding-left: 8px;
           text-decoration: none;
         }
@@ -95,7 +95,7 @@ const Footer = () => {
           transform: translateY(-50%);
           width: 4px;
           height: 4px;
-          background: #48A268;
+          background: #4ade80;
           border-radius: 50%;
           opacity: 0;
           transition: all 0.3s ease;
@@ -106,11 +106,11 @@ const Footer = () => {
         }
 
         .social-section {
-          background: rgba(46, 109, 74, 0.05);
+          background: rgba(10, 93, 74, 0.4);
           border-radius: 20px;
           padding: 30px;
           backdrop-filter: blur(10px);
-          border: 1px solid rgba(46, 109, 74, 0.1);
+          border: 1px solid rgba(184, 230, 211, 0.2);
           margin-bottom: 20px;
         }
 
@@ -118,7 +118,7 @@ const Footer = () => {
           font-size: 1.1rem;
           font-weight: 500;
           margin-bottom: 20px;
-          color: #2E6D4A;
+          color: #e8f5f2;
         }
 
         .social-icons {
@@ -130,31 +130,33 @@ const Footer = () => {
         .social-icon {
           width: 45px;
           height: 45px;
-          background: rgba(255, 255, 255, 0.1);
+          background: rgba(184, 230, 211, 0.1);
           border-radius: 12px;
           display: flex;
           align-items: center;
           justify-content: center;
           transition: all 0.3s ease;
-          border: 1px solid rgba(255, 255, 255, 0.2);
+          border: 1px solid rgba(184, 230, 211, 0.2);
+          color: #b8e6d3;
         }
 
         .social-icon:hover {
-          background: #48A268;
+          background: #4ade80;
+          color: #064635;
           transform: translateY(-3px);
-          box-shadow: 0 8px 25px rgba(72, 162, 104, 0.3);
+          box-shadow: 0 8px 25px rgba(74, 222, 128, 0.3);
         }
 
         .app-download-section {
-          background: rgba(255, 255, 255, 0.05);
+          background: rgba(10, 93, 74, 0.3);
           border-radius: 20px;
           padding: 30px;
           backdrop-filter: blur(10px);
-          border: 1px solid rgba(255, 255, 255, 0.1);
+          border: 1px solid rgba(184, 230, 211, 0.2);
         }
 
         .app-description {
-          color: rgba(255, 255, 255, 0.8);
+          color: #a1d9cc;
           font-size: 0.95rem;
           line-height: 1.6;
           margin-bottom: 25px;
@@ -171,33 +173,33 @@ const Footer = () => {
           transition: all 0.3s ease;
           border-radius: 12px;
           overflow: hidden;
-          background: rgba(255, 255, 255, 0.1);
+          background: rgba(184, 230, 211, 0.1);
           padding: 8px;
-          border: 1px solid rgba(255, 255, 255, 0.2);
+          border: 1px solid rgba(184, 230, 211, 0.2);
         }
 
         .app-store-btn:hover {
           transform: translateY(-2px);
-          box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-          background: rgba(255, 255, 255, 0.15);
+          box-shadow: 0 8px 25px rgba(74, 222, 128, 0.2);
+          background: rgba(184, 230, 211, 0.15);
         }
 
         .app-store-btn img {
           width: 140px;
           height: auto;
           display: block;
-          filter: brightness(1.1);
+          filter: brightness(1.2) contrast(1.1);
         }
 
         .footer-bottom {
-          border-top: 1px solid rgba(46, 109, 74, 0.15);
+          border-top: 1px solid rgba(184, 230, 211, 0.2);
           margin-top: 50px;
           padding-top: 25px;
           text-align: center;
         }
 
         .footer-bottom-text {
-          color: #6c757d;
+          color: #a1d9cc;
           font-size: 0.9rem;
           margin: 0;
         }
@@ -207,6 +209,14 @@ const Footer = () => {
           grid-template-columns: 1fr 1fr 1fr;
           gap: 40px;
           margin-bottom: 40px;
+        }
+
+        .app-title-override {
+          color: #e8f5f2 !important;
+        }
+
+        .app-description-override {
+          color: #a1d9cc !important;
         }
 
         @media (max-width: 768px) {
@@ -250,7 +260,7 @@ const Footer = () => {
         }
       `}</style>
 
-      <footer className="modern-footer">
+      <footer className="modern-footer mt-0">
         <div className="footer-wave"></div>
         
         <div className="container footer-content">
@@ -260,7 +270,6 @@ const Footer = () => {
               <div className="social-section text-center">
                 <h6 className="social-text">Follow us! We're friendly:</h6>
                 <div className="social-icons justify-content-center">
-              
                   <a href="#" className="social-icon">
                     <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15 0 1.49.75 2.81 1.91 3.56-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.98 8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21 16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56.84-.6 1.566-1.36 2.14-2.23z"/>
@@ -313,13 +322,10 @@ const Footer = () => {
                 {[
                   "About Us",
                   "Careers", 
-              
                   "Press",
                   "for Good",
                   "Blog",
                   "Terms & Privacy",
-                  
-                 
                 ].map((item) => (
                   <li key={item}>
                     <a href="#" className="footer-link">{item}</a>
@@ -331,8 +337,8 @@ const Footer = () => {
             {/* App Download Section */}
             <div className="footer-section">
               <div className="app-download-section">
-                <h6 className="footer-section-title text-dark">Download our app</h6>
-                <p className="app-description text-dark">
+                <h6 className="footer-section-title app-title-override">Download our app</h6>
+                <p className="app-description app-description-override">
                   Tackle your to-do list wherever you are with our mobile app.
                 </p>
                 <div className="app-store-buttons">

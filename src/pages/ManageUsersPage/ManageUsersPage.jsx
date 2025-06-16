@@ -32,7 +32,7 @@ const ManageUsersPage = () => {
       const token = localStorage.getItem('adminToken');
       console.log('Fetching users with token:', token);
 
-      const response = await axios.get('https://x8sdvnt5-5049.uks1.devtunnels.ms/api/Dashboard/users', {
+      const response = await axios.get('https://1smgdvqm-5049.uks1.devtunnels.ms/api/Dashboard/users', {
         headers: { 
           'Authorization': `Bearer ${token}`,
           'Accept': 'application/json'
@@ -57,7 +57,7 @@ const ManageUsersPage = () => {
         console.log('Using token:', token);
 
         const response = await axios.delete(
-          `https://x8sdvnt5-5049.uks1.devtunnels.ms/api/Dashboard/users/${userId}`,
+          `https://1smgdvqm-5049.uks1.devtunnels.ms/api/Dashboard/users/${userId}`,
           {
             headers: { 
               'Authorization': `Bearer ${token}`,
@@ -110,7 +110,7 @@ const ManageUsersPage = () => {
       };
 
       const response = await axios.put(
-        `https://x8sdvnt5-5049.uks1.devtunnels.ms/api/Dashboard/users/${selectedUser.userId}`,
+        `https://1smgdvqm-5049.uks1.devtunnels.ms/api/Dashboard/users/${selectedUser.userId}`,
         updateData,
         {
           headers: { 

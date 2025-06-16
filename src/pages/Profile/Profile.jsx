@@ -4,7 +4,7 @@ import {
 } from 'lucide-react';
 import './Profile.css';
 
-const baseUrl = "https://x8sdvnt5-5049.uks1.devtunnels.ms";
+const baseUrl = "https://1smgdvqm-5049.uks1.devtunnels.ms";
 
 const Profile = () => {
   const [profile, setProfile] = useState({

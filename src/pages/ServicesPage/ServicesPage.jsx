@@ -46,7 +46,7 @@ const ServicesPage = () => {
   useEffect(() => {
     const fetchServices = async () => {
       try {
-        const response = await fetch('https://x8sdvnt5-5049.uks1.devtunnels.ms/api/services/services');
+        const response = await fetch('https://1smgdvqm-5049.uks1.devtunnels.ms/api/services/services');
         if (!response.ok) {
           throw new Error(`HTTP error: ${response.status}`);
         }
@@ -158,7 +158,7 @@ const ServicesPage = () => {
         ) : (
           <Row className="g-4">
             {filteredServices.map((service) => {
-              const baseUrl = "https://x8sdvnt5-5049.uks1.devtunnels.ms";
+              const baseUrl = "https://1smgdvqm-5049.uks1.devtunnels.ms";
               const imageUrl = service.imageUrl
                 ? service.imageUrl.startsWith("http")
                   ? service.imageUrl

@@ -32,7 +32,7 @@ const SignupPage = () => {
   async function submitSignupPage(values) {
     try {
       const { data } = await axios.post(
-        "https://x8sdvnt5-5049.uks1.devtunnels.ms/api/AuthUser/register",
+        "https://1smgdvqm-5049.uks1.devtunnels.ms/api/AuthUser/register",
         values,
         {
           headers: { "Content-Type": "application/json" },

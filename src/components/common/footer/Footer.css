@@ -1,42 +1,98 @@
 /* General footer styling */
 .footer {
-  background-color: #6c757d; /* Matches the gray background */
-  color: #fff; /* White text color */
-  padding: 40px 20px;
+  background: linear-gradient(
+    135deg,
+    #073c2b 0%,
+    #043629 50%,
+    #032d23 100%
+  ); /* Rich gradient background */
+
+  padding: 50px 20px 30px;
   text-align: left;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle background pattern */
+.footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: radial-gradient(
+      circle at 20% 80%,
+      rgba(255, 255, 255, 0.02) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 80% 20%,
+      rgba(255, 255, 255, 0.02) 0%,
+      transparent 50%
+    );
+  pointer-events: none;
 }
 
 .footer a {
-  color: #fff;
+  color: #c1efdb; /* Soft green-tinted white */
   text-decoration: none;
-  transition: color 0.3s;
+  transition: all 0.3s ease;
+  position: relative;
 }
 
 .footer a:hover {
-  color: #adb5bd; /* Lighter gray for hover effect */
+  color: #ffffff;
+  text-shadow: 0 0 8px rgba(184, 230, 210, 0.3);
 }
 
 /* Section headers */
 .footer h5 {
-  font-size: 16px;
-  margin-bottom: 20px;
-  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 25px;
+  font-weight: 600;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.footer h5::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  height: 2px;
+  background: linear-gradient(90deg, #4ade80, #22c55e);
+  border-radius: 2px;
 }
 
 /* Social media icons */
 .footer .social-icons {
   display: flex;
-  gap: 15px;
-  margin-bottom: 20px;
+  gap: 20px;
+  margin-bottom: 25px;
 }
 
 .footer .social-icons i {
-  font-size: 20px;
-  transition: transform 0.3s;
+  font-size: 22px;
+  transition: all 0.3s ease;
+  color: #b8e6d2;
+  padding: 10px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
 }
 
 .footer .social-icons i:hover {
-  transform: scale(1.1);
+  transform: translateY(-3px) scale(1.1);
+  color: #ffffff;
+  background: rgba(74, 222, 128, 0.2);
+  border-color: rgba(74, 222, 128, 0.3);
+  box-shadow: 0 5px 15px rgba(74, 222, 128, 0.2);
 }
 
 /* Links lists */
@@ -47,24 +103,72 @@
 }
 
 .footer .list-unstyled li {
-  margin-bottom: 10px;
+  margin-bottom: 12px;
+  position: relative;
+}
+
+.footer .list-unstyled li a {
+  padding: 5px 0;
+  display: inline-block;
+  border-bottom: 1px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.footer .list-unstyled li a:hover {
+  border-bottom-color: #4ade80;
+  padding-left: 10px;
 }
 
 /* App download section */
+.footer .app-download {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  align-items: center;
+}
+
 .footer .app-download img {
-  max-width: 120px;
-  margin-right: 15px;
-  transition: transform 0.3s;
+  max-width: 130px;
+  height: auto;
+  transition: all 0.3s ease;
+  border-radius: 8px;
+  filter: brightness(0.9);
 }
 
 .footer .app-download img:hover {
-  transform: scale(1.05);
+  transform: translateY(-2px) scale(1.05);
+  filter: brightness(1);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Divider line */
+.footer-divider {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  margin: 30px 0 20px;
+}
+
+/* Copyright section */
+.footer .copyright {
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  color: #b8e6d2;
+  font-size: 14px;
+  margin-top: 30px;
 }
 
 /* Responsive design */
 @media (max-width: 768px) {
   .footer {
     text-align: center;
+    padding: 40px 15px 25px;
   }
 
   .footer .row {
@@ -73,7 +177,41 @@
   }
 
   .footer .col {
+    margin-bottom: 30px;
+  }
+
+  .footer h5 {
+    font-size: 16px;
     margin-bottom: 20px;
+  }
+
+  .footer h5::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .footer .social-icons {
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  .footer .app-download {
+    justify-content: center;
+  }
+
+  .footer .app-download img {
+    max-width: 110px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 30px 10px 20px;
+  }
+
+  .footer .social-icons i {
+    font-size: 20px;
+    padding: 8px;
   }
 
   .footer .app-download img {

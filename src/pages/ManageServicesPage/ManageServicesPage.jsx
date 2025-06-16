@@ -39,7 +39,7 @@ const ManageServicesPage = () => {
   const fetchServices = async () => {
     try {
       const token = localStorage.getItem('adminToken');
-      const response = await axios.get('https://x8sdvnt5-5049.uks1.devtunnels.ms/api/Dashboard/services', {
+      const response = await axios.get('https://1smgdvqm-5049.uks1.devtunnels.ms/api/Dashboard/services', {
         headers: { Authorization: `Bearer ${token}` }
       });
       setServices(response.data);
@@ -121,7 +121,7 @@ const ManageServicesPage = () => {
       if (selectedService) {
         // Update service
         response = await axios.put(
-          `https://x8sdvnt5-5049.uks1.devtunnels.ms/api/Dashboard/services/${selectedService.ser_id}`,
+          `https://1smgdvqm-5049.uks1.devtunnels.ms/api/Dashboard/services/${selectedService.ser_id}`,
           formDataToSend,
           {
             headers: {
@@ -133,7 +133,7 @@ const ManageServicesPage = () => {
       } else {
         // Create new service
         response = await axios.post(
-          'https://x8sdvnt5-5049.uks1.devtunnels.ms/api/Dashboard/services',
+          'https://1smgdvqm-5049.uks1.devtunnels.ms/api/Dashboard/services',
           formDataToSend,
           {
             headers: {
@@ -157,7 +157,7 @@ const ManageServicesPage = () => {
       try {
         const token = localStorage.getItem('adminToken');
         await axios.delete(
-          `https://x8sdvnt5-5049.uks1.devtunnels.ms/api/Dashboard/services/${serviceId}`,
+          `https://1smgdvqm-5049.uks1.devtunnels.ms/api/Dashboard/services/${serviceId}`,
           {
             headers: { 
               'Authorization': `Bearer ${token}`
@@ -277,7 +277,7 @@ const ManageServicesPage = () => {
               </thead>
               <tbody>
                 {filteredServices.map(service => {
-                  const baseUrl = "https://x8sdvnt5-5049.uks1.devtunnels.ms";
+                  const baseUrl = "https://1smgdvqm-5049.uks1.devtunnels.ms";
                   const imageUrl = service.imageUrl
                     ? service.imageUrl.startsWith("http")
                       ? service.imageUrl

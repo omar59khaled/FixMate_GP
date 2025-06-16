@@ -32,13 +32,13 @@ const AdminDashboard = () => {
         
         // Fetch all data from APIs
         const [usersRes, servicesRes, summaryRes] = await Promise.all([
-          axios.get('https://x8sdvnt5-5049.uks1.devtunnels.ms/api/Dashboard/users', {
+          axios.get('https://1smgdvqm-5049.uks1.devtunnels.ms/api/Dashboard/users', {
             headers: { Authorization: `Bearer ${token}` }
           }),
-          axios.get('https://x8sdvnt5-5049.uks1.devtunnels.ms/api/Dashboard/services', {
+          axios.get('https://1smgdvqm-5049.uks1.devtunnels.ms/api/Dashboard/services', {
             headers: { Authorization: `Bearer ${token}` }
           }),
-          axios.get('https://x8sdvnt5-5049.uks1.devtunnels.ms/api/Dashboard/summary', {
+          axios.get('https://1smgdvqm-5049.uks1.devtunnels.ms/api/Dashboard/summary', {
             headers: { Authorization: `Bearer ${token}` }
           })
         ]);
@@ -69,30 +69,26 @@ const AdminDashboard = () => {
     navigate(path);
   };
 
-  // Prepare data for charts
-  const prepareMainOverviewData = () => {
-    if (!summaryData) return [];
-    const total = (summaryData.totalBookings || 0) + (summaryData.totalTechnicians || 0) + (summaryData.pendingBookings || 0);
+  // Prepare data for System Overview chart (Users vs Technicians)
+  const prepareSystemOverviewData = () => {
+    const totalUsers = stats.totalUsers || 0;
+    const totalTechnicians = stats.totalTechnicians || 0;
+    const total = totalUsers + totalTechnicians;
+    
     if (total === 0) return [];
     
     return [
       { 
-        name: 'Total Bookings', 
-        value: summaryData.totalBookings || 0, 
-        percentage: ((summaryData.totalBookings || 0) / total * 100).toFixed(1),
+        name: 'Total Users', 
+        value: totalUsers, 
+        percentage: ((totalUsers / total) * 100).toFixed(1),
         color: '#0088FE' 
       },
       { 
         name: 'Total Technicians', 
-        value: summaryData.totalTechnicians || 0, 
-        percentage: ((summaryData.totalTechnicians || 0) / total * 100).toFixed(1),
+        value: totalTechnicians, 
+        percentage: ((totalTechnicians / total) * 100).toFixed(1),
         color: '#00C49F' 
-      },
-      { 
-        name: 'Pending Bookings', 
-        value: summaryData.pendingBookings || 0, 
-        percentage: ((summaryData.pendingBookings || 0) / total * 100).toFixed(1),
-        color: '#FFBB28' 
       }
     ];
   };
@@ -216,15 +212,15 @@ const AdminDashboard = () => {
 
           {/* Charts Section */}
           <div className="row g-4">
-            {/* Main Overview Pie Chart */}
+            {/* System Overview Pie Chart - Users vs Technicians */}
             <div className="col-12 col-lg-6">
               <div className="card h-100 border-0 shadow-sm">
                 <div className="card-body">
-                  <h5 className="card-title mb-4">System Overview</h5>
+                  <h5 className="card-title mb-4">System Overview (Users vs Technicians)</h5>
                   <ResponsiveContainer width="100%" height={300}>
                     <PieChart>
                       <Pie
-                        data={prepareMainOverviewData()}
+                        data={prepareSystemOverviewData()}
                         cx="50%"
                         cy="50%"
                         labelLine={false}
@@ -233,7 +229,7 @@ const AdminDashboard = () => {
                         fill="#8884d8"
                         dataKey="value"
                       >
-                        {prepareMainOverviewData().map((entry, index) => (
+                        {prepareSystemOverviewData().map((entry, index) => (
                           <Cell key={`cell-${index}`} fill={entry.color} />
                         ))}
                       </Pie>

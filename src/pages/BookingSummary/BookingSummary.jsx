@@ -26,7 +26,7 @@ const BookingSummary = () => {
         setLoading(true);
         console.log('Fetching booking data for ID:', bookingId);
         
-        const response = await fetch(`https://x8sdvnt5-5049.uks1.devtunnels.ms/api/Booking/${bookingId}/summary`);
+        const response = await fetch(`https://1smgdvqm-5049.uks1.devtunnels.ms/api/Booking/${bookingId}/summary`);
         
         console.log('Response status:', response.status);
         
