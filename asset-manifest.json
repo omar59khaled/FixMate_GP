@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/FixMate_GP/static/css/main.22d8a37d.css",
-    "main.js": "/FixMate_GP/static/js/main.ab1c2a5f.js",
+    "main.css": "/FixMate_GP/static/css/main.163a2130.css",
+    "main.js": "/FixMate_GP/static/js/main.2c9197be.js",
     "static/js/488.42a43473.chunk.js": "/FixMate_GP/static/js/488.42a43473.chunk.js",
     "static/media/assembly.jpg": "/FixMate_GP/static/media/assembly.d1491fe549f4e1d1d4c4.jpg",
     "static/media/fa-solid-900.ttf": "/FixMate_GP/static/media/fa-solid-900.2582b0e4bcf85eceead0.ttf",
@@ -19,12 +19,12 @@
     "static/media/fa-v4compatibility.ttf": "/FixMate_GP/static/media/fa-v4compatibility.da94ef451f4969af06e6.ttf",
     "static/media/fa-v4compatibility.woff2": "/FixMate_GP/static/media/fa-v4compatibility.ea8f94e1d22e0d35ccd4.woff2",
     "index.html": "/FixMate_GP/index.html",
-    "main.22d8a37d.css.map": "/FixMate_GP/static/css/main.22d8a37d.css.map",
-    "main.ab1c2a5f.js.map": "/FixMate_GP/static/js/main.ab1c2a5f.js.map",
+    "main.163a2130.css.map": "/FixMate_GP/static/css/main.163a2130.css.map",
+    "main.2c9197be.js.map": "/FixMate_GP/static/js/main.2c9197be.js.map",
     "488.42a43473.chunk.js.map": "/FixMate_GP/static/js/488.42a43473.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.22d8a37d.css",
-    "static/js/main.ab1c2a5f.js"
+    "static/css/main.163a2130.css",
+    "static/js/main.2c9197be.js"
   ]
 }
